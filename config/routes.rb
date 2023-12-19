@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Api defination
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      # We are going to list the resources here.
+      resources :users, only: %i[show create update destroy]
     end
   end
 
