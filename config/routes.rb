@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   # Api defination
   namespace :api, defaults: { format: :json } do
-    # We are going to list the resources here.
+    namespace :v1 do
+      # We are going to list the resources here.
+    end
   end
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
